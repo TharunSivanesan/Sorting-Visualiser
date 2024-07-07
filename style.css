@@ -1,7 +1,49 @@
 body{
-    background-color: rgb(66, 59, 59);
+    background-color: #27282b;
 }
 h1{
     color: white;
     text-align: center;
+}
+
+button{
+    border-radius: 5px;
+    margin:10px;
+    padding: 10px;
+    font-size: small;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+#newarraybtn{
+    border-color: rgb(0, 243, 243);
+    color: rgb(0, 243, 243);
+    background-color: #27282b;
+}
+.sortbtn{
+    border-color: rgb(65, 147, 255);
+    color: rgb(65, 147, 255);
+    background-color: #27282b;
+    margin-left: 10px;
+}
+span{
+    display: flex;
+    margin-left: auto;
+}
+p{
+    color: white;
+}
+div{
+    background-color: #27282b;
+    display: flex;
+    justify-content: center;
+}
+.bar{
+    background-color: yellow;
+    width: 5px;
+    margin-left: 5px;
 }
