@@ -6,7 +6,8 @@ async function selectionSortWithDelay(bars){
         bars[key].style.backgroundColor='red'
         for(let j=i+1;j<size;j++){
             bars[j].style.backgroundColor='red'
-            await sleep(200)
+            if(!sortinginProgress)return;
+            await sleep();
             let a=bars[j].clientHeight
             if(min>a){
                 bars[key].style.backgroundColor='yellow'
@@ -27,10 +28,3 @@ async function selectionSortWithDelay(bars){
     }
 }
 
-let selectionbtn=document.getElementById("selectionbtn");
-
-// let bardiv=document.getElementById('bardiv');
-// let bars=bardiv.getElementsByClassName('bar')
-selectionbtn.addEventListener('click',()=>{
-    selectionSortWithDelay(bars);
-})

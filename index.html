@@ -16,7 +16,11 @@
     <h1>Sorting Visualiser</h1>
     <nav>
         <button id="newarraybtn">new array</button>
-        <span>
+        <label for="barcount" style="color: white;">No of bars:</label>
+        <input type="range" name="barcount" id="barrange" min="3" max="100">
+        <label for="barcount" style="color: white;">Speed:</label>
+        <input type="range" name="speed" id="speedrange" min="10000" max="100000">
+        <span class="btns">
             <button class="sortbtn" id="bubblebtn">Bubble sort</button>
             <button class="sortbtn" id="selectionbtn">Selection sort</button>
             <button class="sortbtn" id="insertionbtn">Insertion sort</button>
@@ -24,8 +28,10 @@
             <button class="sortbtn" id="mergebtn">Merge sort</button>
         </span>
     </nav>
-    <div id="bardiv">
-    </div>
+    <span class="bars">
+      <div id="bardiv">
+      </div>
+    </span>
     <script src="js_files/sorting.js"></script>
     <script src="js_files/bubble.js"></script>
     <script src="js_files/insertion.js"></script>

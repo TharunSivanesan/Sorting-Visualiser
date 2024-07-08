@@ -11,8 +11,9 @@ async function mergeBars(bars,l,m,r){
     for(let i=0;i<n2;i++){
         R[i]=bars[m+i+1].clientHeight
         bars[m+i+1].style.backgroundColor='red'
+        if(!sortinginProgress)return;
     }
-    await sleep(1000);
+    await sleep();
     let k=l,i=0,j=0;
     while(i<n1&&j<n2){
         if(L[i]<=R[j]){
@@ -42,7 +43,8 @@ async function mergeBars(bars,l,m,r){
         k++
         j++
     }
-    await sleep(1000);
+    if(!sortinginProgress)return;
+    await sleep();
 }
 
 async function mergeSortFunc(bars,l,r){
@@ -54,9 +56,3 @@ async function mergeSortFunc(bars,l,r){
 }
 
 
-let mergebtn=document.getElementById("mergebtn");
-
-mergebtn.addEventListener('click',async ()=>{
-    let size=bars.length
-    await mergeSortFunc(bars,0,size-1);
-})

@@ -1,5 +1,7 @@
 body{
     background-color: #27282b;
+    justify-content: center;
+    align-items: center;
 }
 h1{
     color: white;
@@ -23,31 +25,64 @@ nav {
     border-color: rgb(0, 243, 243);
     color: rgb(0, 243, 243);
     background-color: #27282b;
+    
 }
+#newarraybtn:hover{
+    box-shadow: 0 0 20px rgba(0, 140, 186, 0.7);
+    cursor: pointer;
+}
+.sortbtn:hover{
+    box-shadow: 0 0 20px rgba(51, 187, 240, 0.7);
+    cursor: pointer;
+}
+
+.btns{
+    display: flex;
+    margin-left: auto;
+}
+.bars{
+    justify-content: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+p{
+    color: white;
+}
+#bardiv{
+    background-color: #27282b;
+    display: flex;
+    justify-content: center;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bar{
+    background-color: yellow;
+    width: 8px;
+    margin-left:3px;
+    display: flex;
+}
+#barrange,label,#speedrange{
+    margin-left: 10px;
+}
+
 .sortbtn{
     border-color: rgb(65, 147, 255);
     color: rgb(65, 147, 255);
     background-color: #27282b;
     margin-left: 10px;
 }
-span{
-    display: flex;
-    margin-left: auto;
+.on{
+    pointer-events: none;
+    background-color: green;
+    border-color: black;
+    color: aliceblue;
+    box-shadow: 0 0 20px rgba(34, 239, 96, 0.7);
 }
-p{
-    color: white;
-}
-div{
-    background-color: #27282b;
-    display: flex;
-    justify-content: center;
-}
-.bar{
-    background-color: yellow;
-    width: 8px;
-    margin-left: 5px;
-    display: flex;
-}
-.bar p{
-    font-size: 0.7rem;
+.off {
+    pointer-events: none;
+    opacity: 0.5;
+    border-color: red;
+    color: red;
 }

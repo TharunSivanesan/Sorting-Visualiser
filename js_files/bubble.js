@@ -3,9 +3,10 @@ async function bubbleSortWithDelay(bars){
     for(let i=0;i<size;i++){
         let j=0
         for(;j<size-1-i;j++){
+            if(!sortinginProgress)return;
             bars[j].style.backgroundColor='red'
             bars[j+1].style.backgroundColor='red'
-            await sleep(300)
+            await sleep()
             if(bars[j].clientHeight>bars[j+1].clientHeight){
                 // let k=j+1
                 let a=bars[j].clientHeight
@@ -22,10 +23,3 @@ async function bubbleSortWithDelay(bars){
 
 
 
-let bubblebtn=document.getElementById("bubblebtn");
-let bardiv=document.getElementById('bardiv');
-let bars=bardiv.getElementsByClassName('bar')
-
-bubblebtn.addEventListener('click',()=>{
-    bubbleSortWithDelay(bars);
-})
