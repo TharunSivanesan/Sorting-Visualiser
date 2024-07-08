@@ -5,7 +5,7 @@ async function insertionSortWithDelay(bars){
         while(j>0&&bars[j].clientHeight<bars[j-1].clientHeight){
             bars[j].style.backgroundColor='red'
             bars[j-1].style.backgroundColor='red'
-            await new Promise(resolve=>setTimeout(resolve,200))
+            await sleep(200)
             let a=bars[j].clientHeight
             let b=bars[j-1].clientHeight
             bars[j].style.height=b+'px'

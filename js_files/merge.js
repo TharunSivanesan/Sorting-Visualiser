@@ -1,6 +1,3 @@
-function sleep(ms){
-    return new Promise(resolve=>setTimeout(resolve,ms))
-}
 
 async function mergeBars(bars,l,m,r){
     let n1=m-l+1

@@ -6,7 +6,7 @@ async function selectionSortWithDelay(bars){
         bars[key].style.backgroundColor='red'
         for(let j=i+1;j<size;j++){
             bars[j].style.backgroundColor='red'
-            await new Promise(resolve=>setTimeout(resolve,200))
+            await sleep(200)
             let a=bars[j].clientHeight
             if(min>a){
                 bars[key].style.backgroundColor='yellow'

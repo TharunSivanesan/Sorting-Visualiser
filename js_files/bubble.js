@@ -5,7 +5,7 @@ async function bubbleSortWithDelay(bars){
         for(;j<size-1-i;j++){
             bars[j].style.backgroundColor='red'
             bars[j+1].style.backgroundColor='red'
-            await new Promise(resolve => setTimeout(resolve, 200));
+            await sleep(300)
             if(bars[j].clientHeight>bars[j+1].clientHeight){
                 // let k=j+1
                 let a=bars[j].clientHeight

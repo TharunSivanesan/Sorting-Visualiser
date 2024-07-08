@@ -1,3 +1,6 @@
+function sleep(ms){
+    return new Promise(resolve=>setTimeout(resolve,ms))
+}
 
 function generateArray(size){
     let arr=[]
@@ -25,7 +28,7 @@ function createBars(arr){
 let newarraybtn = document.getElementById('newarraybtn')
 
 newarraybtn.addEventListener('click', () => {
-    let arr=generateArray(10)
+    let arr=generateArray(20)
     createBars(arr)
 });
 
