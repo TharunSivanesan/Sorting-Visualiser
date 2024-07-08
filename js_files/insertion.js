@@ -21,8 +21,6 @@ async function insertionSortWithDelay(bars){
 
 let insertionbtn=document.getElementById("insertionbtn");
 
-// let bardiv=document.getElementById('bardiv');
-// let bars=bardiv.getElementsByClassName('bar')
 insertionbtn.addEventListener('click',()=>{
     insertionSortWithDelay(bars);
 })

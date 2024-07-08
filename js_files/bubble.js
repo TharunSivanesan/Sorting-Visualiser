@@ -23,9 +23,9 @@ async function bubbleSortWithDelay(bars){
 
 
 let bubblebtn=document.getElementById("bubblebtn");
-
 let bardiv=document.getElementById('bardiv');
 let bars=bardiv.getElementsByClassName('bar')
+
 bubblebtn.addEventListener('click',()=>{
     bubbleSortWithDelay(bars);
 })
