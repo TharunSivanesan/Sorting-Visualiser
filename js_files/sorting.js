@@ -24,7 +24,7 @@ function createBars(arr){
 let newarraybtn = document.getElementById('newarraybtn')
 
 newarraybtn.addEventListener('click', () => {
-    let arr=generateArray(20)
+    let arr=generateArray(10)
     createBars(arr)
 });
 
