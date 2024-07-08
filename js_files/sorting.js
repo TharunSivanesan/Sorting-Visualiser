@@ -2,7 +2,8 @@ function generateArray(size){
     let arr=[]
     for(let i=0;i<size;i++){
         let c=`bar${i}`
-        let n=Math.floor(Math.random()*100)
+        let a=Math.floor(Math.random()*1000)
+        let n=a%100
         if(n==0)n=1;
         arr.push({c,n});
     }
@@ -21,7 +22,10 @@ function createBars(arr){
 }
 
 let newarraybtn = document.getElementById('newarraybtn')
+
 newarraybtn.addEventListener('click', () => {
-    let arr=generateArray(100)
+    let arr=generateArray(20)
     createBars(arr)
 });
+
+

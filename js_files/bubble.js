@@ -1,10 +1,31 @@
-// function swap(bar1,bar2){
+async function bubbleSortWithDelay(bars){
+    let size=bars.length
+    for(let i=0;i<size;i++){
+        let j=0
+        for(;j<size-1-i;j++){
+            bars[j].style.backgroundColor='red'
+            bars[j+1].style.backgroundColor='red'
+            await new Promise(resolve => setTimeout(resolve, 200));
+            if(bars[j].clientHeight>bars[j+1].clientHeight){
+                // let k=j+1
+                let a=bars[j].clientHeight
+                let b=bars[j+1].clientHeight
+                bars[j].style.height=b+'px'
+                bars[j+1].style.height=a+'px';
+            }
+            bars[j].style.backgroundColor='yellow'
+            bars[j+1].style.backgroundColor='yellow'
+        }
+        bars[j].style.backgroundColor='green'
+    }
+}
 
-// }
-console.log("hi")
+
+
 let bubblebtn=document.getElementById("bubblebtn");
+
+let bardiv=document.getElementById('bardiv');
+let bars=bardiv.getElementsByClassName('bar')
 bubblebtn.addEventListener('click',()=>{
-    let bardiv=document.getElementById('bardiv');
-    let bars=bardiv.getElementsByClassName('bar')
-    console.log(bars)
+    bubbleSortWithDelay(bars);
 })
