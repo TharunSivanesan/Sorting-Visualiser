@@ -38,7 +38,7 @@ async function mergeBars(bars,l,m,r){
         k++
         i++
     }
-
+    
     while(j<n2){
         await sleep();
         bars[k].style.height=R[j]+'px'
@@ -57,5 +57,4 @@ async function mergeSortFunc(bars,l,r){
     await mergeSortFunc(bars,m+1,r)
     await mergeBars(bars,l,m,r)
 }
-
 
