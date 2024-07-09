@@ -13,6 +13,7 @@ async function mergeBars(bars,l,m,r){
         bars[m+i+1].style.backgroundColor='red'
         if(!sortinginProgress)return;
     }
+    await sleep()
     let k=l,i=0,j=0;
     while(i<n1&&j<n2){
         await sleep();
@@ -31,6 +32,7 @@ async function mergeBars(bars,l,m,r){
     }
 
     while(i<n1){
+        await sleep()
         bars[k].style.height=L[i]+'px'
         bars[k].style.backgroundColor='green'
         k++
@@ -38,12 +40,14 @@ async function mergeBars(bars,l,m,r){
     }
     
     while(j<n2){
+        await sleep()
         bars[k].style.height=R[j]+'px'
         bars[k].style.backgroundColor='green'
         k++
         j++
     }
     if(!sortinginProgress)return;
+    await sleep()
 }
 
 async function mergeSortFunc(bars,l,r){
