@@ -32,7 +32,7 @@ async function mergeBars(bars,l,m,r){
     }
 
     while(i<n1){
-        await sleep();
+        // await sleep()
         bars[k].style.height=L[i]+'px'
         bars[k].style.backgroundColor='green'
         k++
